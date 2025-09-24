@@ -1,0 +1,43 @@
+from fastapi import Query, HTTPException
+from fastapi.security import OAuth2PasswordRequestForm
+from fastapi.responses import JSONResponse
+from fastapi import APIRouter
+from fastapi.logger import logger
+
+router = APIRouter()
+
+@router.post("/link-user")
+async def link_auth0_user_with_invitation(
+    auth0_user_id: str = Query(...), 
+    email: str = Query(...), 
+    invitation_token: str = Query(...)
+):
+    """Link Auth0 user with Salesforce contact using invitation token (1-to-1 validation)"""
+    try:
+        logger.info(f"🔗 Linking Auth0 user {auth0_user_id} with invitation token")
+        
+        result = auth_service.validate_invitation_token_with_mapping(
+            token=invitation_token,
+            auth0_user_id=auth0_user_id,
+            email=email
+        )
+        
+        return {
+            "success": True,
+            "message": "User successfully linked with Salesforce contact",
+            "user_mapping": {
+                "auth0_user_id": auth0_user_id,
+                "contact_id": result['contact_id'],
+                "email": result['email']
+            },
+            "invitation_consumed": True
+        }
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"❌ Error linking user: {str(e)}")
+        raise HTTPException(
+            status_code=500,
+            detail=f"Failed to link user: {str(e)}"
+        ) 

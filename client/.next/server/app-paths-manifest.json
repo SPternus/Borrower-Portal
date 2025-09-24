@@ -1,0 +1,7 @@
+{
+  "/api/opportunities/[id]/draws/route": "app/api/opportunities/[id]/draws/route.js",
+  "/api/folders/opportunities/[id]/route": "app/api/folders/opportunities/[id]/route.js",
+  "/api/folders/instance/[id]/files/route": "app/api/folders/instance/[id]/files/route.js",
+  "/api/documents/upload/route": "app/api/documents/upload/route.js",
+  "/page": "app/page.js"
+}

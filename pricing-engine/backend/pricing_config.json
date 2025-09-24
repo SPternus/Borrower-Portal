@@ -1,0 +1,593 @@
+{
+  "pricing_rules": {},
+  "input_variables": [],
+  "output_calculations": [],
+  "lookup_tables": {},
+  "formulas": {
+    "Data Entry - PP.Rehab.ARV": {
+      "F6": {
+        "excel_formula": "=(F4*0.7)-F5",
+        "python_formula": "(F4*0.7)-F5",
+        "dependencies": [
+          "F4",
+          "F5"
+        ]
+      },
+      "F7": {
+        "excel_formula": "=IF(F6=0,MIN(F2:F3),MIN(F2,F3,F6))",
+        "python_formula": "np.where(F6=0,min(F2:F3),min(F2,F3,F6))",
+        "dependencies": [
+          "F6",
+          "F2",
+          "F3",
+          "F2",
+          "F3",
+          "F6"
+        ]
+      }
+    },
+    "FnF": {
+      "E8": {
+        "excel_formula": "=IF(_xlfn.DAYS(D8,E3)<=7,\"\",\"\")",
+        "python_formula": "np.where(_xlfn.DAYS(D8,E3)<=7,\"\",\"\")",
+        "dependencies": [
+          "D8",
+          "E3"
+        ]
+      },
+      "I11": {
+        "excel_formula": "=D13*I5",
+        "python_formula": "D13*I5",
+        "dependencies": [
+          "D13",
+          "I5"
+        ]
+      },
+      "I12": {
+        "excel_formula": "=D14+D15",
+        "python_formula": "D14+D15",
+        "dependencies": [
+          "D14",
+          "D15"
+        ]
+      },
+      "D13": {
+        "excel_formula": "='Data Entry - PP.Rehab.ARV'!B4",
+        "python_formula": "'Data Entry - PP.Rehab.ARV'!B4",
+        "dependencies": [
+          "B4"
+        ]
+      },
+      "I13": {
+        "excel_formula": "=IF(I11>I12,I12,I11)",
+        "python_formula": "np.where(I11>I12,I12,I11)",
+        "dependencies": [
+          "I11",
+          "I12",
+          "I12",
+          "I11"
+        ]
+      },
+      "D14": {
+        "excel_formula": "=I23+I18",
+        "python_formula": "I23+I18",
+        "dependencies": [
+          "I23",
+          "I18"
+        ]
+      },
+      "I14": {
+        "excel_formula": "=D14",
+        "python_formula": "D14",
+        "dependencies": [
+          "D14"
+        ]
+      },
+      "D15": {
+        "excel_formula": "=I22",
+        "python_formula": "I22",
+        "dependencies": [
+          "I22"
+        ]
+      },
+      "I15": {
+        "excel_formula": "=IF(D15*I6<I13-I14,D15*I6,I13-I14)",
+        "python_formula": "np.where(D15*I6<I13-I14,D15*I6,I13-I14)",
+        "dependencies": [
+          "D15",
+          "I6",
+          "I13",
+          "I14",
+          "D15",
+          "I6",
+          "I13",
+          "I14"
+        ]
+      },
+      "I16": {
+        "excel_formula": "=IF(I15+I14<I13,I15+I14,I13)",
+        "python_formula": "np.where(I15+I14<I13,I15+I14,I13)",
+        "dependencies": [
+          "I15",
+          "I14",
+          "I13",
+          "I15",
+          "I14",
+          "I13"
+        ]
+      },
+      "D17": {
+        "excel_formula": "=I16",
+        "python_formula": "I16",
+        "dependencies": [
+          "I16"
+        ]
+      },
+      "D18": {
+        "excel_formula": "=I15-I19",
+        "python_formula": "I15-I19",
+        "dependencies": [
+          "I15",
+          "I19"
+        ]
+      },
+      "I18": {
+        "excel_formula": "=I23*I8",
+        "python_formula": "I23*I8",
+        "dependencies": [
+          "I23",
+          "I8"
+        ]
+      },
+      "I19": {
+        "excel_formula": "=D15*I9",
+        "python_formula": "D15*I9",
+        "dependencies": [
+          "D15",
+          "I9"
+        ]
+      },
+      "I22": {
+        "excel_formula": "='Data Entry - PP.Rehab.ARV'!B2",
+        "python_formula": "'Data Entry - PP.Rehab.ARV'!B2",
+        "dependencies": [
+          "B2"
+        ]
+      },
+      "I23": {
+        "excel_formula": "='Data Entry - PP.Rehab.ARV'!B3",
+        "python_formula": "'Data Entry - PP.Rehab.ARV'!B3",
+        "dependencies": [
+          "B3"
+        ]
+      },
+      "D24": {
+        "excel_formula": "=(D17*0.12)/360",
+        "python_formula": "(D17*0.12)/360",
+        "dependencies": [
+          "D17"
+        ]
+      },
+      "D25": {
+        "excel_formula": "=(D17*0.12)/12",
+        "python_formula": "(D17*0.12)/12",
+        "dependencies": [
+          "D17"
+        ]
+      },
+      "C31": {
+        "excel_formula": "=$D$17*$I$4",
+        "python_formula": "$D$17*$I$4",
+        "dependencies": []
+      },
+      "E31": {
+        "excel_formula": "=I18",
+        "python_formula": "I18",
+        "dependencies": [
+          "I18"
+        ]
+      },
+      "E32": {
+        "excel_formula": "=D15-D18",
+        "python_formula": "D15-D18",
+        "dependencies": [
+          "D15",
+          "D18"
+        ]
+      },
+      "I32": {
+        "excel_formula": "=SUM(C31:C34,E32)+E33+E34",
+        "python_formula": "sum(C31:C34,E32)+E33+E34",
+        "dependencies": [
+          "C31",
+          "C34",
+          "E32",
+          "E33",
+          "E34"
+        ]
+      },
+      "C33": {
+        "excel_formula": "=IF(I7=\"Yes\", D25*6,0)",
+        "python_formula": "np.where(I7=\"Yes\", D25*6,0)",
+        "dependencies": [
+          "I7",
+          "D25"
+        ]
+      },
+      "I33": {
+        "excel_formula": "=D15-D18",
+        "python_formula": "D15-D18",
+        "dependencies": [
+          "D15",
+          "D18"
+        ]
+      },
+      "C34": {
+        "excel_formula": "=_xlfn.DAYS(EOMONTH($D$8,0),$D$8)*$D$24+$D$24",
+        "python_formula": "_xlfn.DAYS(EOMONTH($D$8,0),$D$8)*$D$24+$D$24",
+        "dependencies": []
+      },
+      "I34": {
+        "excel_formula": "=D17*0.06",
+        "python_formula": "D17*0.06",
+        "dependencies": [
+          "D17"
+        ]
+      },
+      "I35": {
+        "excel_formula": "=D14*0.1",
+        "python_formula": "D14*0.1",
+        "dependencies": [
+          "D14"
+        ]
+      },
+      "D37": {
+        "excel_formula": "=(D15-D18)+(D17*0.06)+(D14*0.1)+C31+C32+C34+E32+E33+E34",
+        "python_formula": "(D15-D18)+(D17*0.06)+(D14*0.1)+C31+C32+C34+E32+E33+E34",
+        "dependencies": [
+          "D15",
+          "D18",
+          "D17",
+          "D14",
+          "C31",
+          "C32",
+          "C34",
+          "E32",
+          "E33",
+          "E34"
+        ]
+      },
+      "I37": {
+        "excel_formula": "=SUM(I32:I35)",
+        "python_formula": "sum(I32:I35)",
+        "dependencies": [
+          "I32",
+          "I35"
+        ]
+      },
+      "D38": {
+        "excel_formula": "=SUM(C31:C34)+(E32)",
+        "python_formula": "sum(C31:C34)+(E32)",
+        "dependencies": [
+          "C31",
+          "C34",
+          "E32"
+        ]
+      }
+    },
+    "WholeTail": {
+      "E8": {
+        "excel_formula": "=IF(_xlfn.DAYS(D8,E3)<=7,\"\",\"\")",
+        "python_formula": "np.where(_xlfn.DAYS(D8,E3)<=7,\"\",\"\")",
+        "dependencies": [
+          "D8",
+          "E3"
+        ]
+      },
+      "D13": {
+        "excel_formula": "='Data Entry - PP.Rehab.ARV'!F2",
+        "python_formula": "'Data Entry - PP.Rehab.ARV'!F2",
+        "dependencies": [
+          "F2"
+        ]
+      },
+      "D14": {
+        "excel_formula": "='Data Entry - PP.Rehab.ARV'!F7",
+        "python_formula": "'Data Entry - PP.Rehab.ARV'!F7",
+        "dependencies": [
+          "F7"
+        ]
+      },
+      "D15": {
+        "excel_formula": "=IF($D$14>$D$13,0,$D$13-$D$14)",
+        "python_formula": "np.where($D$14>$D$13,0,$D$13-$D$14)",
+        "dependencies": []
+      },
+      "D17": {
+        "excel_formula": "=IF(D13<D14,D13,D14)",
+        "python_formula": "np.where(D13<D14,D13,D14)",
+        "dependencies": [
+          "D13",
+          "D14",
+          "D13",
+          "D14"
+        ]
+      },
+      "D18": {
+        "excel_formula": "=I12",
+        "python_formula": "I12",
+        "dependencies": [
+          "I12"
+        ]
+      },
+      "D22": {
+        "excel_formula": "=$I$5",
+        "python_formula": "$I$5",
+        "dependencies": []
+      },
+      "D23": {
+        "excel_formula": "=I7",
+        "python_formula": "I7",
+        "dependencies": [
+          "I7"
+        ]
+      },
+      "D24": {
+        "excel_formula": "=(D17*0.12)/360",
+        "python_formula": "(D17*0.12)/360",
+        "dependencies": [
+          "D17"
+        ]
+      },
+      "D25": {
+        "excel_formula": "=($D$17*$D$23)/12",
+        "python_formula": "($D$17*$D$23)/12",
+        "dependencies": []
+      },
+      "C31": {
+        "excel_formula": "=$D$17*$I$4",
+        "python_formula": "$D$17*$I$4",
+        "dependencies": []
+      },
+      "E31": {
+        "excel_formula": "=D15",
+        "python_formula": "D15",
+        "dependencies": [
+          "D15"
+        ]
+      },
+      "E32": {
+        "excel_formula": "=IF($I$6=\"Yes\",$D$25*$I$5,0)",
+        "python_formula": "np.where($I$6=\"Yes\",$D$25*$I$5,0)",
+        "dependencies": []
+      },
+      "C33": {
+        "excel_formula": "=_xlfn.DAYS(EOMONTH($D$8,0),$D$8)*$D$24+$D$24",
+        "python_formula": "_xlfn.DAYS(EOMONTH($D$8,0),$D$8)*$D$24+$D$24",
+        "dependencies": []
+      },
+      "D36": {
+        "excel_formula": "=SUM($C$31:$C$33,$E$31,$E$33)+($D$25*$I$5)+C34",
+        "python_formula": "sum($C$31:$C$33,$E$31,$E$33)+($D$25*$I$5)+C34",
+        "dependencies": [
+          "C34"
+        ]
+      },
+      "D37": {
+        "excel_formula": "=(SUM($C$31:$C$33,$E$32,$E$31))+E33+C34",
+        "python_formula": "(sum($C$31:$C$33,$E$32,$E$31))+E33+C34",
+        "dependencies": [
+          "E33",
+          "C34"
+        ]
+      }
+    },
+    "Bridge - Purchase": {
+      "E8": {
+        "excel_formula": "=IF(_xlfn.DAYS(D8,E3)<=7,\"\",\"\")",
+        "python_formula": "np.where(_xlfn.DAYS(D8,E3)<=7,\"\",\"\")",
+        "dependencies": [
+          "D8",
+          "E3"
+        ]
+      },
+      "D13": {
+        "excel_formula": "='Data Entry - PP.Rehab.ARV'!H2",
+        "python_formula": "'Data Entry - PP.Rehab.ARV'!H2",
+        "dependencies": [
+          "H2"
+        ]
+      },
+      "D16": {
+        "excel_formula": "=D13*I5",
+        "python_formula": "D13*I5",
+        "dependencies": [
+          "D13",
+          "I5"
+        ]
+      },
+      "D21": {
+        "excel_formula": "=(D16*0.12)/360",
+        "python_formula": "(D16*0.12)/360",
+        "dependencies": [
+          "D16"
+        ]
+      },
+      "D22": {
+        "excel_formula": "=(D16*0.12)/12",
+        "python_formula": "(D16*0.12)/12",
+        "dependencies": [
+          "D16"
+        ]
+      },
+      "C28": {
+        "excel_formula": "=$D$16*$I$4",
+        "python_formula": "$D$16*$I$4",
+        "dependencies": []
+      },
+      "E28": {
+        "excel_formula": "=D13-D16",
+        "python_formula": "D13-D16",
+        "dependencies": [
+          "D13",
+          "D16"
+        ]
+      },
+      "C30": {
+        "excel_formula": "=IF(I6=\"Yes\", D22*6,0)",
+        "python_formula": "np.where(I6=\"Yes\", D22*6,0)",
+        "dependencies": [
+          "I6",
+          "D22"
+        ]
+      },
+      "C31": {
+        "excel_formula": "=_xlfn.DAYS(EOMONTH($D$8,0),$D$8)*$D$21+$D$21",
+        "python_formula": "_xlfn.DAYS(EOMONTH($D$8,0),$D$8)*$D$21+$D$21",
+        "dependencies": []
+      },
+      "D34": {
+        "excel_formula": "=(D22*6)+C28+C29+C31+E28+E29+E30",
+        "python_formula": "(D22*6)+C28+C29+C31+E28+E29+E30",
+        "dependencies": [
+          "D22",
+          "C28",
+          "C29",
+          "C31",
+          "E28",
+          "E29",
+          "E30"
+        ]
+      },
+      "D35": {
+        "excel_formula": "=SUM(C28,C29,C30,C31,E28,E29,E30)",
+        "python_formula": "sum(C28,C29,C30,C31,E28,E29,E30)",
+        "dependencies": [
+          "C28",
+          "C29",
+          "C30",
+          "C31",
+          "E28",
+          "E29",
+          "E30"
+        ]
+      }
+    },
+    "Bridge - Refi & DP": {
+      "E8": {
+        "excel_formula": "=IF(_xlfn.DAYS(D8,E3)<=7,\"\",\"\")",
+        "python_formula": "np.where(_xlfn.DAYS(D8,E3)<=7,\"\",\"\")",
+        "dependencies": [
+          "D8",
+          "E3"
+        ]
+      },
+      "C13": {
+        "excel_formula": "=IF('Data Entry - PP.Rehab.ARV'!$J$3=\"Refinance\", \"As-Is Value\", \"Purchase Price\")",
+        "python_formula": "np.where('Data Entry - PP.Rehab.ARV'!$J$3=\"Refinance\", \"As-Is Value\", \"Purchase Price\")",
+        "dependencies": []
+      },
+      "D13": {
+        "excel_formula": "='Data Entry - PP.Rehab.ARV'!H2",
+        "python_formula": "'Data Entry - PP.Rehab.ARV'!H2",
+        "dependencies": [
+          "H2"
+        ]
+      },
+      "C14": {
+        "excel_formula": "=IF('Data Entry - PP.Rehab.ARV'!$J$3=\"Refinance\", \"Current Balance\", \"\")",
+        "python_formula": "np.where('Data Entry - PP.Rehab.ARV'!$J$3=\"Refinance\", \"Current Balance\", \"\")",
+        "dependencies": []
+      },
+      "D14": {
+        "excel_formula": "=IF('Data Entry - PP.Rehab.ARV'!$J$3=\"Refinance\", 'Data Entry - PP.Rehab.ARV'!$J$4, \"\")",
+        "python_formula": "np.where('Data Entry - PP.Rehab.ARV'!$J$3=\"Refinance\", 'Data Entry - PP.Rehab.ARV'!$J$4, \"\")",
+        "dependencies": []
+      },
+      "D16": {
+        "excel_formula": "=D13*I5",
+        "python_formula": "D13*I5",
+        "dependencies": [
+          "D13",
+          "I5"
+        ]
+      },
+      "D21": {
+        "excel_formula": "=(D16*0.12)/360",
+        "python_formula": "(D16*0.12)/360",
+        "dependencies": [
+          "D16"
+        ]
+      },
+      "D22": {
+        "excel_formula": "=(D16*0.12)/12",
+        "python_formula": "(D16*0.12)/12",
+        "dependencies": [
+          "D16"
+        ]
+      },
+      "C28": {
+        "excel_formula": "=$D$16*$I$4",
+        "python_formula": "$D$16*$I$4",
+        "dependencies": []
+      },
+      "C30": {
+        "excel_formula": "=IF(I6=\"Yes\", D22*6,0)",
+        "python_formula": "np.where(I6=\"Yes\", D22*6,0)",
+        "dependencies": [
+          "I6",
+          "D22"
+        ]
+      },
+      "D30": {
+        "excel_formula": "=IF('Data Entry - PP.Rehab.ARV'!$J$3=\"REFINANCE\",\"Current Mtg Balance:\",\"\")",
+        "python_formula": "np.where('Data Entry - PP.Rehab.ARV'!$J$3=\"REFINANCE\",\"Current Mtg Balance:\",\"\")",
+        "dependencies": []
+      },
+      "E30": {
+        "excel_formula": "=IF('Data Entry - PP.Rehab.ARV'!$J$3=\"REFINANCE\",'Data Entry - PP.Rehab.ARV'!$J$4,\"\")",
+        "python_formula": "np.where('Data Entry - PP.Rehab.ARV'!$J$3=\"REFINANCE\",'Data Entry - PP.Rehab.ARV'!$J$4,\"\")",
+        "dependencies": []
+      },
+      "C31": {
+        "excel_formula": "=_xlfn.DAYS(EOMONTH($D$8,0),$D$8)*$D$21+$D$21",
+        "python_formula": "_xlfn.DAYS(EOMONTH($D$8,0),$D$8)*$D$21+$D$21",
+        "dependencies": []
+      },
+      "D34": {
+        "excel_formula": "=(D22*6)+C28+C29+C31+E28+E29",
+        "python_formula": "(D22*6)+C28+C29+C31+E28+E29",
+        "dependencies": [
+          "D22",
+          "C28",
+          "C29",
+          "C31",
+          "E28",
+          "E29"
+        ]
+      },
+      "D35": {
+        "excel_formula": "=SUM(C28,C29,C30,C31,E28,E29,E30)",
+        "python_formula": "sum(C28,C29,C30,C31,E28,E29,E30)",
+        "dependencies": [
+          "C28",
+          "C29",
+          "C30",
+          "C31",
+          "E28",
+          "E29",
+          "E30"
+        ]
+      },
+      "D36": {
+        "excel_formula": "=D16-D35",
+        "python_formula": "D16-D35",
+        "dependencies": [
+          "D16",
+          "D35"
+        ]
+      }
+    },
+    "Data Drop downs": {}
+  }
+}

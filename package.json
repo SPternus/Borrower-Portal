@@ -1,0 +1,43 @@
+{
+  "name": "ternus-borrower-profile",
+  "version": "1.0.0",
+  "description": "Secure digital portal for borrowers to manage loan applications and communicate with lending team",
+  "scripts": {
+    "dev": "concurrently --names \"CLIENT,PYTHON,PRICING-BE,PRICING-FE\" --prefix-colors \"cyan,green,yellow,magenta\" \"npm run client:dev\" \"npm run python:dev\" \"npm run pricing:backend\" \"npm run pricing:frontend\"",
+    "dev:main": "concurrently \"npm run client:dev\" \"npm run python:dev\"",
+    "dev:pricing": "concurrently \"npm run pricing:backend\" \"npm run pricing:frontend\"",
+    "client:dev": "cd client && npm run dev",
+    "python:dev": "cd python-server && source venv/bin/activate && python main.py",
+    "pricing:backend": "cd pricing-engine/backend && source venv/bin/activate && uvicorn main:app --reload --port 5001",
+    "pricing:frontend": "cd pricing-engine/frontend && npm run dev",
+    "build": "npm run client:build && npm run pricing:build",
+    "client:build": "cd client && npm run build",
+    "pricing:build": "cd pricing-engine/frontend && npm run build",
+    "start": "npm run client:start",
+    "client:start": "cd client && npm start",
+    "test": "npm run client:test",
+    "client:test": "cd client && npm test",
+    "setup": "npm run python:setup && npm run pricing:setup",
+    "python:setup": "cd python-server && python3 -m venv venv && source venv/bin/activate && pip install -r requirements.txt",
+    "pricing:setup": "cd pricing-engine/backend && python3 -m venv venv && source venv/bin/activate && pip install -r requirements.txt && cd ../frontend && npm install"
+  },
+  "keywords": [
+    "fintech",
+    "loans",
+    "borrower-portal",
+    "document-management",
+    "secure-portal",
+    "nextjs",
+    "python",
+    "fastapi",
+    "salesforce"
+  ],
+  "author": "Ternus",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "workspaces": [
+    "client"
+  ]
+} 

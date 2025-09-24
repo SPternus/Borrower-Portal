@@ -1,0 +1,89 @@
+{
+  "success": true,
+  "opportunity_id": "006Oz00000IHXmnIAH",
+  "opportunity_name": "Test Application",
+  "loan_type": "Fix & Flip",
+  "loan_type_id": "a0X000000000001",
+  "source": "test",
+  "folder_structure": [
+    {
+      "category": "Income_Documents",
+      "category_display": "Income Documents",
+      "required_documents": [
+        {
+          "id": "req001",
+          "name": "W-2 Forms (Last 2 Years)",
+          "category": "Income_Documents",
+          "required": true,
+          "priority": "high",
+          "description": "Most recent 2 years of W-2 tax forms",
+          "type": "tax_document",
+          "sort_order": 1,
+          "uploaded_files": [],
+          "has_uploads": false,
+          "latest_status": null,
+          "public_notes": []
+        },
+        {
+          "id": "req002",
+          "name": "Pay Stubs (Last 30 Days)",
+          "category": "Income_Documents",
+          "required": true,
+          "priority": "high",
+          "description": "Most recent pay stubs",
+          "type": "income_verification",
+          "sort_order": 2,
+          "uploaded_files": [],
+          "has_uploads": false,
+          "latest_status": null,
+          "public_notes": []
+        }
+      ],
+      "uploaded_documents": [],
+      "summary": {
+        "total_required": 2,
+        "total_uploaded": 0,
+        "approved": 0,
+        "pending": 0,
+        "rejected": 0
+      }
+    },
+    {
+      "category": "Property_Documents",
+      "category_display": "Property Documents",
+      "required_documents": [
+        {
+          "id": "req003",
+          "name": "Purchase Agreement",
+          "category": "Property_Documents",
+          "required": true,
+          "priority": "high",
+          "description": "Signed purchase agreement for the property",
+          "type": "legal_document",
+          "sort_order": 1,
+          "uploaded_files": [],
+          "has_uploads": false,
+          "latest_status": null,
+          "public_notes": []
+        }
+      ],
+      "uploaded_documents": [],
+      "summary": {
+        "total_required": 1,
+        "total_uploaded": 0,
+        "approved": 0,
+        "pending": 0,
+        "rejected": 0
+      }
+    }
+  ],
+  "overall_summary": {
+    "total_categories": 2,
+    "total_required": 3,
+    "total_uploaded": 0,
+    "approved": 0,
+    "pending": 0,
+    "rejected": 0,
+    "completion_percentage": 0.0
+  }
+}

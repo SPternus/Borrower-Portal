@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lead Form Debug Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .form-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .required {
+            color: red;
+        }
+        .btn {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+        .btn:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        .btn-secondary {
+            background-color: #6c757d;
+        }
+        .debug-info {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+        .success {
+            color: green;
+            margin-top: 10px;
+        }
+        .step-indicator {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .step {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background-color: #ddd;
+            border-radius: 50%;
+            line-height: 30px;
+            margin: 0 5px;
+            color: white;
+            font-weight: bold;
+        }
+        .step.active {
+            background-color: #007bff;
+        }
+        .step.completed {
+            background-color: #28a745;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Lead Form Debug Test</h1>
+        <p>This is a simplified version of the lead form to help debug the issue.</p>
+        
+        <div class="step-indicator">
+            <span class="step active" id="step1">1</span>
+            <span class="step" id="step2">2</span>
+            <span class="step" id="step3">3</span>
+            <span class="step" id="step4">4</span>
+        </div>
+        
+        <form id="leadForm">
+            <!-- Step 1: Personal Information -->
+            <div id="step1-content" class="step-content">
+                <h2>Step 1: Personal Information</h2>
+                <div class="form-group">
+                    <label for="firstName">First Name <span class="required">*</span></label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name <span class="required">*</span></label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone <span class="required">*</span></label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+            </div>
+            
+            <!-- Step 2: Company & Property -->
+            <div id="step2-content" class="step-content" style="display: none;">
+                <h2>Step 2: Company & Property</h2>
+                <div class="form-group">
+                    <label for="company">Company Name <span class="required">*</span></label>
+                    <input type="text" id="company" name="company" required>
+                </div>
+                <div class="form-group">
+                    <label for="propertyAddress">Property Address</label>
+                    <input type="text" id="propertyAddress" name="propertyAddress">
+                </div>
+                <div class="form-group">
+                    <label for="rent">Monthly Rent</label>
+                    <input type="text" id="rent" name="rent" placeholder="$2,500">
+                </div>
+                <div class="form-group">
+                    <label for="asIsValue">As-Is Value</label>
+                    <input type="text" id="asIsValue" name="asIsValue" placeholder="$450,000">
+                </div>
+            </div>
+            
+            <!-- Step 3: Investment Goals -->
+            <div id="step3-content" class="step-content" style="display: none;">
+                <h2>Step 3: Investment Goals</h2>
+                <div class="form-group">
+                    <label for="expressedInterest">Expressed Interest</label>
+                    <select id="expressedInterest" name="expressedInterest">
+                        <option value="">Select loan type</option>
+                        <option value="Bridge Loan">Bridge Loan</option>
+                        <option value="Fix and Flip Loan">Fix and Flip Loan</option>
+                        <option value="Ground Up Construction Loan">Ground Up Construction Loan</option>
+                        <option value="Portfolio Rental Loan">Portfolio Rental Loan</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="desiredLoanAmount">Desired Loan Amount</label>
+                    <input type="text" id="desiredLoanAmount" name="desiredLoanAmount" placeholder="$300,000">
+                </div>
+            </div>
+            
+            <!-- Step 4: Final Details -->
+            <div id="step4-content" class="step-content" style="display: none;">
+                <h2>Step 4: Final Details</h2>
+                <div class="form-group">
+                    <label for="interests">Investment Goals</label>
+                    <textarea id="interests" name="interests" rows="4" placeholder="Tell us about your investment goals..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="notes">Additional Notes</label>
+                    <textarea id="notes" name="notes" rows="3" placeholder="Any additional information..."></textarea>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <button type="button" id="prevBtn" class="btn btn-secondary" onclick="changeStep(-1)" disabled>Previous</button>
+                <button type="button" id="nextBtn" class="btn" onclick="changeStep(1)">Continue</button>
+                <button type="submit" id="submitBtn" class="btn" style="display: none;">Submit Application</button>
+            </div>
+            
+            <div id="validationMessage" class="error"></div>
+            <div id="successMessage" class="success"></div>
+        </form>
+        
+        <div class="debug-info">
+            <h3>Debug Information</h3>
+            <p><strong>Current Step:</strong> <span id="currentStepDebug">1</span></p>
+            <p><strong>Form Valid:</strong> <span id="formValidDebug">false</span></p>
+            <p><strong>Company Value:</strong> <span id="companyValueDebug">empty</span></p>
+            <p><strong>All Required Fields:</strong> <span id="requiredFieldsDebug">missing</span></p>
+        </div>
+    </div>
+
+    <script>
+        let currentStep = 1;
+        const totalSteps = 4;
+        
+        function updateStepIndicators() {
+            for (let i = 1; i <= totalSteps; i++) {
+                const stepElement = document.getElementById(`step${i}`);
+                stepElement.classList.remove('active', 'completed');
+                
+                if (i < currentStep) {
+                    stepElement.classList.add('completed');
+                } else if (i === currentStep) {
+                    stepElement.classList.add('active');
+                }
+            }
+        }
+        
+        function showStep(step) {
+            // Hide all steps
+            for (let i = 1; i <= totalSteps; i++) {
+                document.getElementById(`step${i}-content`).style.display = 'none';
+            }
+            
+            // Show current step
+            document.getElementById(`step${step}-content`).style.display = 'block';
+            
+            // Update navigation buttons
+            document.getElementById('prevBtn').disabled = step === 1;
+            document.getElementById('nextBtn').style.display = step === totalSteps ? 'none' : 'inline-block';
+            document.getElementById('submitBtn').style.display = step === totalSteps ? 'inline-block' : 'none';
+            
+            updateStepIndicators();
+            updateDebugInfo();
+        }
+        
+        function validateStep(step) {
+            const validationMessage = document.getElementById('validationMessage');
+            validationMessage.textContent = '';
+            
+            switch(step) {
+                case 1:
+                    const firstName = document.getElementById('firstName').value.trim();
+                    const lastName = document.getElementById('lastName').value.trim();
+                    const email = document.getElementById('email').value.trim();
+                    const phone = document.getElementById('phone').value.trim();
+                    
+                    if (!firstName || !lastName || !email || !phone) {
+                        validationMessage.textContent = 'Please fill in all required fields (First Name, Last Name, Email, Phone)';
+                        return false;
+                    }
+                    return true;
+                    
+                case 2:
+                    const company = document.getElementById('company').value.trim();
+                    
+                    if (!company) {
+                        validationMessage.textContent = 'Please enter your company name';
+                        return false;
+                    }
+                    return true;
+                    
+                case 3:
+                case 4:
+                    return true; // Optional steps
+                    
+                default:
+                    return true;
+            }
+        }
+        
+        function changeStep(direction) {
+            if (direction === 1) {
+                // Going forward - validate current step
+                if (!validateStep(currentStep)) {
+                    return;
+                }
+                
+                if (currentStep < totalSteps) {
+                    currentStep++;
+                    showStep(currentStep);
+                }
+            } else {
+                // Going backward
+                if (currentStep > 1) {
+                    currentStep--;
+                    showStep(currentStep);
+                }
+            }
+        }
+        
+        function updateDebugInfo() {
+            document.getElementById('currentStepDebug').textContent = currentStep;
+            document.getElementById('formValidDebug').textContent = validateStep(currentStep);
+            
+            const companyValue = document.getElementById('company').value.trim();
+            document.getElementById('companyValueDebug').textContent = companyValue || 'empty';
+            
+            const firstName = document.getElementById('firstName').value.trim();
+            const lastName = document.getElementById('lastName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            
+            const step1Complete = firstName && lastName && email && phone;
+            const step2Complete = document.getElementById('company').value.trim();
+            
+            document.getElementById('requiredFieldsDebug').textContent = 
+                `Step 1: ${step1Complete ? 'complete' : 'missing'}, Step 2: ${step2Complete ? 'complete' : 'missing'}`;
+        }
+        
+        // Add event listeners to form fields
+        document.getElementById('leadForm').addEventListener('input', updateDebugInfo);
+        document.getElementById('leadForm').addEventListener('change', updateDebugInfo);
+        
+        // Handle form submission
+        document.getElementById('leadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            if (!validateStep(currentStep)) {
+                return;
+            }
+            
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            console.log('Form submitted:', data);
+            document.getElementById('successMessage').textContent = 
+                'Form submitted successfully! Check the console for form data.';
+            
+            // Simulate API call
+            setTimeout(() => {
+                alert('Lead form submitted successfully!\n\nData: ' + JSON.stringify(data, null, 2));
+            }, 500);
+        });
+        
+        // Initialize
+        showStep(1);
+    </script>
+</body>
+</html> 

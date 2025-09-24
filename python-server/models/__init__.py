@@ -1,0 +1,1 @@
+# Models package for Ternus Borrower Profile API 

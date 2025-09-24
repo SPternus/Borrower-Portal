@@ -1,0 +1,2802 @@
+{
+  "worksheets": [
+    "Data Entry - PP.Rehab.ARV",
+    "FnF",
+    "WholeTail",
+    "Bridge - Purchase",
+    "Bridge - Refi & DP",
+    "Data Drop downs"
+  ],
+  "formulas": {
+    "Data Entry - PP.Rehab.ARV": {
+      "F6": {
+        "formula": "=(F4*0.7)-F5",
+        "row": 6,
+        "col": 6,
+        "column_letter": "F"
+      },
+      "F7": {
+        "formula": "=IF(F6=0,MIN(F2:F3),MIN(F2,F3,F6))",
+        "row": 7,
+        "col": 6,
+        "column_letter": "F"
+      }
+    },
+    "FnF": {
+      "E8": {
+        "formula": "=IF(_xlfn.DAYS(D8,E3)<=7,\"\",\"\")",
+        "row": 8,
+        "col": 5,
+        "column_letter": "E"
+      },
+      "I11": {
+        "formula": "=D13*I5",
+        "row": 11,
+        "col": 9,
+        "column_letter": "I"
+      },
+      "I12": {
+        "formula": "=D14+D15",
+        "row": 12,
+        "col": 9,
+        "column_letter": "I"
+      },
+      "D13": {
+        "formula": "='Data Entry - PP.Rehab.ARV'!B4",
+        "row": 13,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "I13": {
+        "formula": "=IF(I11>I12,I12,I11)",
+        "row": 13,
+        "col": 9,
+        "column_letter": "I"
+      },
+      "D14": {
+        "formula": "=I23+I18",
+        "row": 14,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "I14": {
+        "formula": "=D14",
+        "row": 14,
+        "col": 9,
+        "column_letter": "I"
+      },
+      "D15": {
+        "formula": "=I22",
+        "row": 15,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "I15": {
+        "formula": "=IF(D15*I6<I13-I14,D15*I6,I13-I14)",
+        "row": 15,
+        "col": 9,
+        "column_letter": "I"
+      },
+      "I16": {
+        "formula": "=IF(I15+I14<I13,I15+I14,I13)",
+        "row": 16,
+        "col": 9,
+        "column_letter": "I"
+      },
+      "D17": {
+        "formula": "=I16",
+        "row": 17,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "D18": {
+        "formula": "=I15-I19",
+        "row": 18,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "I18": {
+        "formula": "=I23*I8",
+        "row": 18,
+        "col": 9,
+        "column_letter": "I"
+      },
+      "I19": {
+        "formula": "=D15*I9",
+        "row": 19,
+        "col": 9,
+        "column_letter": "I"
+      },
+      "I22": {
+        "formula": "='Data Entry - PP.Rehab.ARV'!B2",
+        "row": 22,
+        "col": 9,
+        "column_letter": "I"
+      },
+      "I23": {
+        "formula": "='Data Entry - PP.Rehab.ARV'!B3",
+        "row": 23,
+        "col": 9,
+        "column_letter": "I"
+      },
+      "D24": {
+        "formula": "=(D17*0.12)/360",
+        "row": 24,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "D25": {
+        "formula": "=(D17*0.12)/12",
+        "row": 25,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "C31": {
+        "formula": "=$D$17*$I$4",
+        "row": 31,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "E31": {
+        "formula": "=I18",
+        "row": 31,
+        "col": 5,
+        "column_letter": "E"
+      },
+      "E32": {
+        "formula": "=D15-D18",
+        "row": 32,
+        "col": 5,
+        "column_letter": "E"
+      },
+      "I32": {
+        "formula": "=SUM(C31:C34,E32)+E33+E34",
+        "row": 32,
+        "col": 9,
+        "column_letter": "I"
+      },
+      "C33": {
+        "formula": "=IF(I7=\"Yes\", D25*6,0)",
+        "row": 33,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "I33": {
+        "formula": "=D15-D18",
+        "row": 33,
+        "col": 9,
+        "column_letter": "I"
+      },
+      "C34": {
+        "formula": "=_xlfn.DAYS(EOMONTH($D$8,0),$D$8)*$D$24+$D$24",
+        "row": 34,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "I34": {
+        "formula": "=D17*0.06",
+        "row": 34,
+        "col": 9,
+        "column_letter": "I"
+      },
+      "I35": {
+        "formula": "=D14*0.1",
+        "row": 35,
+        "col": 9,
+        "column_letter": "I"
+      },
+      "D37": {
+        "formula": "=(D15-D18)+(D17*0.06)+(D14*0.1)+C31+C32+C34+E32+E33+E34",
+        "row": 37,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "I37": {
+        "formula": "=SUM(I32:I35)",
+        "row": 37,
+        "col": 9,
+        "column_letter": "I"
+      },
+      "D38": {
+        "formula": "=SUM(C31:C34)+(E32)",
+        "row": 38,
+        "col": 4,
+        "column_letter": "D"
+      }
+    },
+    "WholeTail": {
+      "E8": {
+        "formula": "=IF(_xlfn.DAYS(D8,E3)<=7,\"\",\"\")",
+        "row": 8,
+        "col": 5,
+        "column_letter": "E"
+      },
+      "D13": {
+        "formula": "='Data Entry - PP.Rehab.ARV'!F2",
+        "row": 13,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "D14": {
+        "formula": "='Data Entry - PP.Rehab.ARV'!F7",
+        "row": 14,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "D15": {
+        "formula": "=IF($D$14>$D$13,0,$D$13-$D$14)",
+        "row": 15,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "D17": {
+        "formula": "=IF(D13<D14,D13,D14)",
+        "row": 17,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "D18": {
+        "formula": "=I12",
+        "row": 18,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "D22": {
+        "formula": "=$I$5",
+        "row": 22,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "D23": {
+        "formula": "=I7",
+        "row": 23,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "D24": {
+        "formula": "=(D17*0.12)/360",
+        "row": 24,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "D25": {
+        "formula": "=($D$17*$D$23)/12",
+        "row": 25,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "C31": {
+        "formula": "=$D$17*$I$4",
+        "row": 31,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "E31": {
+        "formula": "=D15",
+        "row": 31,
+        "col": 5,
+        "column_letter": "E"
+      },
+      "E32": {
+        "formula": "=IF($I$6=\"Yes\",$D$25*$I$5,0)",
+        "row": 32,
+        "col": 5,
+        "column_letter": "E"
+      },
+      "C33": {
+        "formula": "=_xlfn.DAYS(EOMONTH($D$8,0),$D$8)*$D$24+$D$24",
+        "row": 33,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "D36": {
+        "formula": "=SUM($C$31:$C$33,$E$31,$E$33)+($D$25*$I$5)+C34",
+        "row": 36,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "D37": {
+        "formula": "=(SUM($C$31:$C$33,$E$32,$E$31))+E33+C34",
+        "row": 37,
+        "col": 4,
+        "column_letter": "D"
+      }
+    },
+    "Bridge - Purchase": {
+      "E8": {
+        "formula": "=IF(_xlfn.DAYS(D8,E3)<=7,\"\",\"\")",
+        "row": 8,
+        "col": 5,
+        "column_letter": "E"
+      },
+      "D13": {
+        "formula": "='Data Entry - PP.Rehab.ARV'!H2",
+        "row": 13,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "D16": {
+        "formula": "=D13*I5",
+        "row": 16,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "D21": {
+        "formula": "=(D16*0.12)/360",
+        "row": 21,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "D22": {
+        "formula": "=(D16*0.12)/12",
+        "row": 22,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "C28": {
+        "formula": "=$D$16*$I$4",
+        "row": 28,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "E28": {
+        "formula": "=D13-D16",
+        "row": 28,
+        "col": 5,
+        "column_letter": "E"
+      },
+      "C30": {
+        "formula": "=IF(I6=\"Yes\", D22*6,0)",
+        "row": 30,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "C31": {
+        "formula": "=_xlfn.DAYS(EOMONTH($D$8,0),$D$8)*$D$21+$D$21",
+        "row": 31,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "D34": {
+        "formula": "=(D22*6)+C28+C29+C31+E28+E29+E30",
+        "row": 34,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "D35": {
+        "formula": "=SUM(C28,C29,C30,C31,E28,E29,E30)",
+        "row": 35,
+        "col": 4,
+        "column_letter": "D"
+      }
+    },
+    "Bridge - Refi & DP": {
+      "E8": {
+        "formula": "=IF(_xlfn.DAYS(D8,E3)<=7,\"\",\"\")",
+        "row": 8,
+        "col": 5,
+        "column_letter": "E"
+      },
+      "C13": {
+        "formula": "=IF('Data Entry - PP.Rehab.ARV'!$J$3=\"Refinance\", \"As-Is Value\", \"Purchase Price\")",
+        "row": 13,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "D13": {
+        "formula": "='Data Entry - PP.Rehab.ARV'!H2",
+        "row": 13,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "C14": {
+        "formula": "=IF('Data Entry - PP.Rehab.ARV'!$J$3=\"Refinance\", \"Current Balance\", \"\")",
+        "row": 14,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "D14": {
+        "formula": "=IF('Data Entry - PP.Rehab.ARV'!$J$3=\"Refinance\", 'Data Entry - PP.Rehab.ARV'!$J$4, \"\")",
+        "row": 14,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "D16": {
+        "formula": "=D13*I5",
+        "row": 16,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "D21": {
+        "formula": "=(D16*0.12)/360",
+        "row": 21,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "D22": {
+        "formula": "=(D16*0.12)/12",
+        "row": 22,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "C28": {
+        "formula": "=$D$16*$I$4",
+        "row": 28,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "C30": {
+        "formula": "=IF(I6=\"Yes\", D22*6,0)",
+        "row": 30,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "D30": {
+        "formula": "=IF('Data Entry - PP.Rehab.ARV'!$J$3=\"REFINANCE\",\"Current Mtg Balance:\",\"\")",
+        "row": 30,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "E30": {
+        "formula": "=IF('Data Entry - PP.Rehab.ARV'!$J$3=\"REFINANCE\",'Data Entry - PP.Rehab.ARV'!$J$4,\"\")",
+        "row": 30,
+        "col": 5,
+        "column_letter": "E"
+      },
+      "C31": {
+        "formula": "=_xlfn.DAYS(EOMONTH($D$8,0),$D$8)*$D$21+$D$21",
+        "row": 31,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "D34": {
+        "formula": "=(D22*6)+C28+C29+C31+E28+E29",
+        "row": 34,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "D35": {
+        "formula": "=SUM(C28,C29,C30,C31,E28,E29,E30)",
+        "row": 35,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "D36": {
+        "formula": "=D16-D35",
+        "row": 36,
+        "col": 4,
+        "column_letter": "D"
+      }
+    },
+    "Data Drop downs": {}
+  },
+  "cell_values": {
+    "Data Entry - PP.Rehab.ARV": {
+      "A1": {
+        "value": "Fix N Flip - Purchase",
+        "data_type": "str",
+        "row": 1,
+        "col": 1,
+        "column_letter": "A"
+      },
+      "C1": {
+        "value": "Fix N Flip - Delayed Purchase",
+        "data_type": "str",
+        "row": 1,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "E1": {
+        "value": "Wholetail Loans ",
+        "data_type": "str",
+        "row": 1,
+        "col": 5,
+        "column_letter": "E"
+      },
+      "G1": {
+        "value": "Bridge - Purchase",
+        "data_type": "str",
+        "row": 1,
+        "col": 7,
+        "column_letter": "G"
+      },
+      "I1": {
+        "value": "Bridge - Purchase",
+        "data_type": "str",
+        "row": 1,
+        "col": 9,
+        "column_letter": "I"
+      },
+      "A2": {
+        "value": "Purchase Price",
+        "data_type": "str",
+        "row": 2,
+        "col": 1,
+        "column_letter": "A"
+      },
+      "E2": {
+        "value": "Purchase Price",
+        "data_type": "str",
+        "row": 2,
+        "col": 5,
+        "column_letter": "E"
+      },
+      "G2": {
+        "value": "Purchase Price",
+        "data_type": "str",
+        "row": 2,
+        "col": 7,
+        "column_letter": "G"
+      },
+      "I2": {
+        "value": "PP/AIV",
+        "data_type": "str",
+        "row": 2,
+        "col": 9,
+        "column_letter": "I"
+      },
+      "A3": {
+        "value": "Rehab",
+        "data_type": "str",
+        "row": 3,
+        "col": 1,
+        "column_letter": "A"
+      },
+      "E3": {
+        "value": "As-Is Value",
+        "data_type": "str",
+        "row": 3,
+        "col": 5,
+        "column_letter": "E"
+      },
+      "I3": {
+        "value": "Transaction Type",
+        "data_type": "str",
+        "row": 3,
+        "col": 9,
+        "column_letter": "I"
+      },
+      "A4": {
+        "value": "ARV",
+        "data_type": "str",
+        "row": 4,
+        "col": 1,
+        "column_letter": "A"
+      },
+      "E4": {
+        "value": "ARV",
+        "data_type": "str",
+        "row": 4,
+        "col": 5,
+        "column_letter": "E"
+      },
+      "I4": {
+        "value": "Current Balance*",
+        "data_type": "str",
+        "row": 4,
+        "col": 9,
+        "column_letter": "I"
+      },
+      "E5": {
+        "value": "Budget",
+        "data_type": "str",
+        "row": 5,
+        "col": 5,
+        "column_letter": "E"
+      },
+      "I5": {
+        "value": "*NOTE: Only fill for Refi's",
+        "data_type": "str",
+        "row": 5,
+        "col": 9,
+        "column_letter": "I"
+      },
+      "E6": {
+        "value": "Adjusted Value",
+        "data_type": "str",
+        "row": 6,
+        "col": 5,
+        "column_letter": "E"
+      },
+      "E7": {
+        "value": "Lendable Home Value",
+        "data_type": "str",
+        "row": 7,
+        "col": 5,
+        "column_letter": "E"
+      }
+    },
+    "FnF": {
+      "B1": {
+        "value": "TERNUS LENDING LLC",
+        "data_type": "str",
+        "row": 1,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "C2": {
+        "value": "TERM SHEET",
+        "data_type": "str",
+        "row": 2,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "E2": {
+        "value": "Date:",
+        "data_type": "str",
+        "row": 2,
+        "col": 5,
+        "column_letter": "E"
+      },
+      "B4": {
+        "value": "Guarantor:",
+        "data_type": "str",
+        "row": 4,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "D4": {
+        "value": "Phone:",
+        "data_type": "str",
+        "row": 4,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "H4": {
+        "value": "Origination Fee",
+        "data_type": "str",
+        "row": 4,
+        "col": 8,
+        "column_letter": "H"
+      },
+      "I4": {
+        "value": 0.02,
+        "data_type": "float",
+        "row": 4,
+        "col": 9,
+        "column_letter": "I"
+      },
+      "B5": {
+        "value": "Borrower:",
+        "data_type": "str",
+        "row": 5,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "D5": {
+        "value": "Years in Business:",
+        "data_type": "str",
+        "row": 5,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "H5": {
+        "value": "Max Leverage",
+        "data_type": "str",
+        "row": 5,
+        "col": 8,
+        "column_letter": "H"
+      },
+      "I5": {
+        "value": 0.7,
+        "data_type": "float",
+        "row": 5,
+        "col": 9,
+        "column_letter": "I"
+      },
+      "B6": {
+        "value": "Email Address:",
+        "data_type": "str",
+        "row": 6,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "H6": {
+        "value": "Initial LTV Cap",
+        "data_type": "str",
+        "row": 6,
+        "col": 8,
+        "column_letter": "H"
+      },
+      "I6": {
+        "value": 1,
+        "data_type": "int",
+        "row": 6,
+        "col": 9,
+        "column_letter": "I"
+      },
+      "B7": {
+        "value": "Borrower's Address:",
+        "data_type": "str",
+        "row": 7,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "H7": {
+        "value": "Ineterest reserve",
+        "data_type": "str",
+        "row": 7,
+        "col": 8,
+        "column_letter": "H"
+      },
+      "I7": {
+        "value": "No",
+        "data_type": "str",
+        "row": 7,
+        "col": 9,
+        "column_letter": "I"
+      },
+      "C8": {
+        "value": "Requested Loan Closing Date:",
+        "data_type": "str",
+        "row": 8,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "H8": {
+        "value": "Budget contingency",
+        "data_type": "str",
+        "row": 8,
+        "col": 8,
+        "column_letter": "H"
+      },
+      "I8": {
+        "value": 0,
+        "data_type": "int",
+        "row": 8,
+        "col": 9,
+        "column_letter": "I"
+      },
+      "B9": {
+        "value": "Property Address:",
+        "data_type": "str",
+        "row": 9,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "H9": {
+        "value": "Down Payment",
+        "data_type": "str",
+        "row": 9,
+        "col": 8,
+        "column_letter": "H"
+      },
+      "I9": {
+        "value": 0,
+        "data_type": "int",
+        "row": 9,
+        "col": 9,
+        "column_letter": "I"
+      },
+      "B10": {
+        "value": "Year Built:",
+        "data_type": "str",
+        "row": 10,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "D10": {
+        "value": "Bedrooms:",
+        "data_type": "str",
+        "row": 10,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "B11": {
+        "value": "SqFt:",
+        "data_type": "str",
+        "row": 11,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "D11": {
+        "value": "Bathrooms:",
+        "data_type": "str",
+        "row": 11,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "H11": {
+        "value": "MAX LOAN AMOUNT",
+        "data_type": "str",
+        "row": 11,
+        "col": 8,
+        "column_letter": "H"
+      },
+      "B12": {
+        "value": "Pool:",
+        "data_type": "str",
+        "row": 12,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "D12": {
+        "value": "Garage:",
+        "data_type": "str",
+        "row": 12,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "H12": {
+        "value": "PP + REHAB",
+        "data_type": "str",
+        "row": 12,
+        "col": 8,
+        "column_letter": "H"
+      },
+      "C13": {
+        "value": "Est. After Repair Value(ARV):",
+        "data_type": "str",
+        "row": 13,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "H13": {
+        "value": "LOAN AMOUNT BASIS",
+        "data_type": "str",
+        "row": 13,
+        "col": 8,
+        "column_letter": "H"
+      },
+      "C14": {
+        "value": "Rehab Budget:",
+        "data_type": "str",
+        "row": 14,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "H14": {
+        "value": "REHAB",
+        "data_type": "str",
+        "row": 14,
+        "col": 8,
+        "column_letter": "H"
+      },
+      "C15": {
+        "value": "Purchase Price",
+        "data_type": "str",
+        "row": 15,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "H15": {
+        "value": "MAX INITIAL ADVANCE",
+        "data_type": "str",
+        "row": 15,
+        "col": 8,
+        "column_letter": "H"
+      },
+      "H16": {
+        "value": "TOTAL LOAN AMOUNT:",
+        "data_type": "str",
+        "row": 16,
+        "col": 8,
+        "column_letter": "H"
+      },
+      "C17": {
+        "value": "Max Loan Amount:",
+        "data_type": "str",
+        "row": 17,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "C18": {
+        "value": "Initial Advance:",
+        "data_type": "str",
+        "row": 18,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "H18": {
+        "value": "Budget Contingency",
+        "data_type": "str",
+        "row": 18,
+        "col": 8,
+        "column_letter": "H"
+      },
+      "H19": {
+        "value": "Down Payment",
+        "data_type": "str",
+        "row": 19,
+        "col": 8,
+        "column_letter": "H"
+      },
+      "B20": {
+        "value": "Loan Terms",
+        "data_type": "str",
+        "row": 20,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "C21": {
+        "value": "Pmt type:",
+        "data_type": "str",
+        "row": 21,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "D21": {
+        "value": "Interest Only",
+        "data_type": "str",
+        "row": 21,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "H21": {
+        "value": "Data Entry Info",
+        "data_type": "str",
+        "row": 21,
+        "col": 8,
+        "column_letter": "H"
+      },
+      "C22": {
+        "value": "Term:",
+        "data_type": "str",
+        "row": 22,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "D22": {
+        "value": "6 months",
+        "data_type": "str",
+        "row": 22,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "H22": {
+        "value": "PP",
+        "data_type": "str",
+        "row": 22,
+        "col": 8,
+        "column_letter": "H"
+      },
+      "C23": {
+        "value": "Daily Interest rate:",
+        "data_type": "str",
+        "row": 23,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "D23": {
+        "value": "12%  actual days/ 360",
+        "data_type": "str",
+        "row": 23,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "H23": {
+        "value": "Rehab",
+        "data_type": "str",
+        "row": 23,
+        "col": 8,
+        "column_letter": "H"
+      },
+      "C24": {
+        "value": "Per Diem Interest Payment",
+        "data_type": "str",
+        "row": 24,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "C25": {
+        "value": "Estimated 30-day Interest Pmt:",
+        "data_type": "str",
+        "row": 25,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "C26": {
+        "value": "Due date:",
+        "data_type": "str",
+        "row": 26,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "D26": {
+        "value": "1st of month",
+        "data_type": "str",
+        "row": 26,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "C27": {
+        "value": "Interest Due at closing:",
+        "data_type": "str",
+        "row": 27,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "D27": {
+        "value": "Prorated current month",
+        "data_type": "str",
+        "row": 27,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "C28": {
+        "value": "Insurance:",
+        "data_type": "str",
+        "row": 28,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "D28": {
+        "value": "Must show receipt for insurance for 6 months/p@c",
+        "data_type": "str",
+        "row": 28,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "B30": {
+        "value": "Estimated Closing Fees & Adjustments",
+        "data_type": "str",
+        "row": 30,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "B31": {
+        "value": "Est. Origination Fee:",
+        "data_type": "str",
+        "row": 31,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "D31": {
+        "value": "Budget Contingency:",
+        "data_type": "str",
+        "row": 31,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "B32": {
+        "value": "Processing Fee:",
+        "data_type": "str",
+        "row": 32,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "C32": {
+        "value": 1745,
+        "data_type": "int",
+        "row": 32,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "D32": {
+        "value": "Down Payment:",
+        "data_type": "str",
+        "row": 32,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "H32": {
+        "value": "ecc",
+        "data_type": "str",
+        "row": 32,
+        "col": 8,
+        "column_letter": "H"
+      },
+      "B33": {
+        "value": "Interest Reserve:",
+        "data_type": "str",
+        "row": 33,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "D33": {
+        "value": "Application Fee:",
+        "data_type": "str",
+        "row": 33,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "E33": {
+        "value": 250,
+        "data_type": "int",
+        "row": 33,
+        "col": 5,
+        "column_letter": "E"
+      },
+      "H33": {
+        "value": "DP",
+        "data_type": "str",
+        "row": 33,
+        "col": 8,
+        "column_letter": "H"
+      },
+      "B34": {
+        "value": "Est. Prorated Interest",
+        "data_type": "str",
+        "row": 34,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "D34": {
+        "value": "Doc Prep Fee:",
+        "data_type": "str",
+        "row": 34,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "E34": {
+        "value": 599,
+        "data_type": "int",
+        "row": 34,
+        "col": 5,
+        "column_letter": "E"
+      },
+      "H34": {
+        "value": "6 PAYMENTS",
+        "data_type": "str",
+        "row": 34,
+        "col": 8,
+        "column_letter": "H"
+      },
+      "H35": {
+        "value": "10% BUFFER",
+        "data_type": "str",
+        "row": 35,
+        "col": 8,
+        "column_letter": "H"
+      },
+      "B36": {
+        "value": "Cash Requiements",
+        "data_type": "str",
+        "row": 36,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "C37": {
+        "value": "Required Proof Of Capital",
+        "data_type": "str",
+        "row": 37,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "C38": {
+        "value": "Estimated Cash to Close",
+        "data_type": "str",
+        "row": 38,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "B39": {
+        "value": "NOTE: These numbers are simply estimates designed to help you plan.  Ternus Lending, LLC has no control over other charges you may incur from the title company or other entities. This is not an underwriting approval or commitment to lend. Terms subject to change pending underwriting.",
+        "data_type": "str",
+        "row": 39,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "B43": {
+        "value": "I accept these loan terms and understand some values may change at closing.",
+        "data_type": "str",
+        "row": 43,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "D44": {
+        "value": "Initials:",
+        "data_type": "str",
+        "row": 44,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "E44": {
+        "value": "_____________________",
+        "data_type": "str",
+        "row": 44,
+        "col": 5,
+        "column_letter": "E"
+      }
+    },
+    "WholeTail": {
+      "B1": {
+        "value": "TERNUS LENDING LLC",
+        "data_type": "str",
+        "row": 1,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "C2": {
+        "value": "TERM SHEET",
+        "data_type": "str",
+        "row": 2,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "E2": {
+        "value": "Date:",
+        "data_type": "str",
+        "row": 2,
+        "col": 5,
+        "column_letter": "E"
+      },
+      "H3": {
+        "value": "Loan Data Parameters",
+        "data_type": "str",
+        "row": 3,
+        "col": 8,
+        "column_letter": "H"
+      },
+      "B4": {
+        "value": "Guarantor:",
+        "data_type": "str",
+        "row": 4,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "D4": {
+        "value": "Phone:",
+        "data_type": "str",
+        "row": 4,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "H4": {
+        "value": "Origination Fee",
+        "data_type": "str",
+        "row": 4,
+        "col": 8,
+        "column_letter": "H"
+      },
+      "I4": {
+        "value": 0.01,
+        "data_type": "float",
+        "row": 4,
+        "col": 9,
+        "column_letter": "I"
+      },
+      "J4": {
+        "value": "Default is 1%",
+        "data_type": "str",
+        "row": 4,
+        "col": 10,
+        "column_letter": "J"
+      },
+      "B5": {
+        "value": "Borrower:",
+        "data_type": "str",
+        "row": 5,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "D5": {
+        "value": "Years in Business:",
+        "data_type": "str",
+        "row": 5,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "H5": {
+        "value": "# of months",
+        "data_type": "str",
+        "row": 5,
+        "col": 8,
+        "column_letter": "H"
+      },
+      "I5": {
+        "value": 2,
+        "data_type": "int",
+        "row": 5,
+        "col": 9,
+        "column_letter": "I"
+      },
+      "J5": {
+        "value": "Default is 2 Months",
+        "data_type": "str",
+        "row": 5,
+        "col": 10,
+        "column_letter": "J"
+      },
+      "B6": {
+        "value": "Email Address:",
+        "data_type": "str",
+        "row": 6,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "H6": {
+        "value": "Ineterest reserve",
+        "data_type": "str",
+        "row": 6,
+        "col": 8,
+        "column_letter": "H"
+      },
+      "I6": {
+        "value": "No",
+        "data_type": "str",
+        "row": 6,
+        "col": 9,
+        "column_letter": "I"
+      },
+      "J6": {
+        "value": "Default is No",
+        "data_type": "str",
+        "row": 6,
+        "col": 10,
+        "column_letter": "J"
+      },
+      "B7": {
+        "value": "Borrower's Address:",
+        "data_type": "str",
+        "row": 7,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "H7": {
+        "value": "Rate",
+        "data_type": "str",
+        "row": 7,
+        "col": 8,
+        "column_letter": "H"
+      },
+      "I7": {
+        "value": 0.12,
+        "data_type": "float",
+        "row": 7,
+        "col": 9,
+        "column_letter": "I"
+      },
+      "J7": {
+        "value": "Default is 12%",
+        "data_type": "str",
+        "row": 7,
+        "col": 10,
+        "column_letter": "J"
+      },
+      "C8": {
+        "value": "Requested Loan Closing Date:",
+        "data_type": "str",
+        "row": 8,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "H8": {
+        "value": "Do not change defaults without approval",
+        "data_type": "str",
+        "row": 8,
+        "col": 8,
+        "column_letter": "H"
+      },
+      "B9": {
+        "value": "Property Address:",
+        "data_type": "str",
+        "row": 9,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "B10": {
+        "value": "Year Built:",
+        "data_type": "str",
+        "row": 10,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "D10": {
+        "value": "Bedrooms:",
+        "data_type": "str",
+        "row": 10,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "B11": {
+        "value": "SqFt:",
+        "data_type": "str",
+        "row": 11,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "D11": {
+        "value": "Bathrooms:",
+        "data_type": "str",
+        "row": 11,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "B12": {
+        "value": "Pool:",
+        "data_type": "str",
+        "row": 12,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "D12": {
+        "value": "Garage:",
+        "data_type": "str",
+        "row": 12,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "C13": {
+        "value": "Purchase Price",
+        "data_type": "str",
+        "row": 13,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "C14": {
+        "value": "Lendable Value",
+        "data_type": "str",
+        "row": 14,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "C15": {
+        "value": "Down Payment",
+        "data_type": "str",
+        "row": 15,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "C17": {
+        "value": "Loan Amount",
+        "data_type": "str",
+        "row": 17,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "C18": {
+        "value": "Initial Advance:",
+        "data_type": "str",
+        "row": 18,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "B20": {
+        "value": "Loan Terms",
+        "data_type": "str",
+        "row": 20,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "C21": {
+        "value": "Pmt type:",
+        "data_type": "str",
+        "row": 21,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "D21": {
+        "value": "Interest Only",
+        "data_type": "str",
+        "row": 21,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "C22": {
+        "value": "Term (months):",
+        "data_type": "str",
+        "row": 22,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "C23": {
+        "value": "Daily Interest rate:",
+        "data_type": "str",
+        "row": 23,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "C24": {
+        "value": "Per Diem Interest Payment",
+        "data_type": "str",
+        "row": 24,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "C25": {
+        "value": "Estimated 30-day Interest Pmt:",
+        "data_type": "str",
+        "row": 25,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "C26": {
+        "value": "Due date:",
+        "data_type": "str",
+        "row": 26,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "D26": {
+        "value": "1st of month",
+        "data_type": "str",
+        "row": 26,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "C27": {
+        "value": "Interest Due at closing:",
+        "data_type": "str",
+        "row": 27,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "D27": {
+        "value": "Prorated current month",
+        "data_type": "str",
+        "row": 27,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "C28": {
+        "value": "Insurance:",
+        "data_type": "str",
+        "row": 28,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "D28": {
+        "value": "Must show receipt for insurance for loan term/p@c",
+        "data_type": "str",
+        "row": 28,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "B30": {
+        "value": "Estimated Closing Fees & Cash Requirements",
+        "data_type": "str",
+        "row": 30,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "B31": {
+        "value": "Est. Origination Fee:",
+        "data_type": "str",
+        "row": 31,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "D31": {
+        "value": "Down Payment:",
+        "data_type": "str",
+        "row": 31,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "B32": {
+        "value": "Processing Fee:",
+        "data_type": "str",
+        "row": 32,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "C32": {
+        "value": 1745,
+        "data_type": "int",
+        "row": 32,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "D32": {
+        "value": "Interest Reserve:",
+        "data_type": "str",
+        "row": 32,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "B33": {
+        "value": "Est. Prorated Interest:",
+        "data_type": "str",
+        "row": 33,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "D33": {
+        "value": "Doc Prep:",
+        "data_type": "str",
+        "row": 33,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "E33": {
+        "value": 599,
+        "data_type": "int",
+        "row": 33,
+        "col": 5,
+        "column_letter": "E"
+      },
+      "B34": {
+        "value": "Application Fee:",
+        "data_type": "str",
+        "row": 34,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "C34": {
+        "value": 250,
+        "data_type": "int",
+        "row": 34,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "B35": {
+        "value": "Cash Requiements",
+        "data_type": "str",
+        "row": 35,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "C36": {
+        "value": "Required Proof Of Capital",
+        "data_type": "str",
+        "row": 36,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "C37": {
+        "value": "Estimated Cash to Close",
+        "data_type": "str",
+        "row": 37,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "B38": {
+        "value": "NOTE: These numbers are simply estimates designed to help you plan.  Ternus Lending, LLC has no control over other charges you may incur from the title company or other entities. This is not an underwriting approval or commitment to lend. Terms subject to change pending underwriting.",
+        "data_type": "str",
+        "row": 38,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "B42": {
+        "value": "I accept these loan terms and understand some values may change at closing.",
+        "data_type": "str",
+        "row": 42,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "D43": {
+        "value": "Initials:",
+        "data_type": "str",
+        "row": 43,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "E43": {
+        "value": "_____________________",
+        "data_type": "str",
+        "row": 43,
+        "col": 5,
+        "column_letter": "E"
+      }
+    },
+    "Bridge - Purchase": {
+      "B1": {
+        "value": "TERNUS LENDING LLC",
+        "data_type": "str",
+        "row": 1,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "C2": {
+        "value": "TERM SHEET",
+        "data_type": "str",
+        "row": 2,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "E2": {
+        "value": "Date:",
+        "data_type": "str",
+        "row": 2,
+        "col": 5,
+        "column_letter": "E"
+      },
+      "B4": {
+        "value": "Guarantor:",
+        "data_type": "str",
+        "row": 4,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "D4": {
+        "value": "Phone:",
+        "data_type": "str",
+        "row": 4,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "H4": {
+        "value": "Origination Fee",
+        "data_type": "str",
+        "row": 4,
+        "col": 8,
+        "column_letter": "H"
+      },
+      "I4": {
+        "value": 0.02,
+        "data_type": "float",
+        "row": 4,
+        "col": 9,
+        "column_letter": "I"
+      },
+      "B5": {
+        "value": "Borrower:",
+        "data_type": "str",
+        "row": 5,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "D5": {
+        "value": "Years in Business:",
+        "data_type": "str",
+        "row": 5,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "H5": {
+        "value": "Max Leverage",
+        "data_type": "str",
+        "row": 5,
+        "col": 8,
+        "column_letter": "H"
+      },
+      "I5": {
+        "value": 0.7,
+        "data_type": "float",
+        "row": 5,
+        "col": 9,
+        "column_letter": "I"
+      },
+      "B6": {
+        "value": "Email Address:",
+        "data_type": "str",
+        "row": 6,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "H6": {
+        "value": "Ineterest reserve",
+        "data_type": "str",
+        "row": 6,
+        "col": 8,
+        "column_letter": "H"
+      },
+      "I6": {
+        "value": "No",
+        "data_type": "str",
+        "row": 6,
+        "col": 9,
+        "column_letter": "I"
+      },
+      "B7": {
+        "value": "Borrower's Address:",
+        "data_type": "str",
+        "row": 7,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "C8": {
+        "value": "Requested Loan Closing Date:",
+        "data_type": "str",
+        "row": 8,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "B9": {
+        "value": "Property Address:",
+        "data_type": "str",
+        "row": 9,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "B10": {
+        "value": "Year Built:",
+        "data_type": "str",
+        "row": 10,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "D10": {
+        "value": "Bedrooms:",
+        "data_type": "str",
+        "row": 10,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "B11": {
+        "value": "SqFt:",
+        "data_type": "str",
+        "row": 11,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "D11": {
+        "value": "Bathrooms:",
+        "data_type": "str",
+        "row": 11,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "B12": {
+        "value": "Pool:",
+        "data_type": "str",
+        "row": 12,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "D12": {
+        "value": "Garage:",
+        "data_type": "str",
+        "row": 12,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "C13": {
+        "value": "Purchase Price",
+        "data_type": "str",
+        "row": 13,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "C16": {
+        "value": "Max Loan Amount:",
+        "data_type": "str",
+        "row": 16,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "B17": {
+        "value": "Loan Terms",
+        "data_type": "str",
+        "row": 17,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "C18": {
+        "value": "Pmt type:",
+        "data_type": "str",
+        "row": 18,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "D18": {
+        "value": "Interest Only",
+        "data_type": "str",
+        "row": 18,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "C19": {
+        "value": "Term:",
+        "data_type": "str",
+        "row": 19,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "D19": {
+        "value": "6 months",
+        "data_type": "str",
+        "row": 19,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "C20": {
+        "value": "Daily Interest rate:",
+        "data_type": "str",
+        "row": 20,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "D20": {
+        "value": "12%  actual days/ 360",
+        "data_type": "str",
+        "row": 20,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "C21": {
+        "value": "Per Diem Interest Payment",
+        "data_type": "str",
+        "row": 21,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "C22": {
+        "value": "Estimated 30-day Interest Pmt:",
+        "data_type": "str",
+        "row": 22,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "C23": {
+        "value": "Due date:",
+        "data_type": "str",
+        "row": 23,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "D23": {
+        "value": "1st of month",
+        "data_type": "str",
+        "row": 23,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "C24": {
+        "value": "Interest Due at closing:",
+        "data_type": "str",
+        "row": 24,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "D24": {
+        "value": "Prorated current month",
+        "data_type": "str",
+        "row": 24,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "C25": {
+        "value": "Insurance:",
+        "data_type": "str",
+        "row": 25,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "D25": {
+        "value": "Must show receipt for insurance for 6 months/p@c",
+        "data_type": "str",
+        "row": 25,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "B27": {
+        "value": "Estimated Closing Fees & Adjustments",
+        "data_type": "str",
+        "row": 27,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "B28": {
+        "value": "Est. Origination Fee:",
+        "data_type": "str",
+        "row": 28,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "D28": {
+        "value": "Down Payment:",
+        "data_type": "str",
+        "row": 28,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "B29": {
+        "value": "Processing Fee:",
+        "data_type": "str",
+        "row": 29,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "C29": {
+        "value": 1745,
+        "data_type": "int",
+        "row": 29,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "D29": {
+        "value": "Application Fee:",
+        "data_type": "str",
+        "row": 29,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "E29": {
+        "value": 250,
+        "data_type": "int",
+        "row": 29,
+        "col": 5,
+        "column_letter": "E"
+      },
+      "B30": {
+        "value": "Interest Reserve:",
+        "data_type": "str",
+        "row": 30,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "D30": {
+        "value": "Doc Prep Fee:",
+        "data_type": "str",
+        "row": 30,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "E30": {
+        "value": 599,
+        "data_type": "int",
+        "row": 30,
+        "col": 5,
+        "column_letter": "E"
+      },
+      "B31": {
+        "value": "Est. Prorated Interest",
+        "data_type": "str",
+        "row": 31,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "B33": {
+        "value": "Cash Requiements",
+        "data_type": "str",
+        "row": 33,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "C34": {
+        "value": "Required Proof Of Capital",
+        "data_type": "str",
+        "row": 34,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "C35": {
+        "value": "Estimated Cash to Close",
+        "data_type": "str",
+        "row": 35,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "B36": {
+        "value": "NOTE: These numbers are simply estimates designed to help you plan.  Ternus Lending, LLC has no control over other charges you may incur from the title company or other entities. This is not an underwriting approval or commitment to lend. Terms subject to change pending underwriting.",
+        "data_type": "str",
+        "row": 36,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "B40": {
+        "value": "I accept these loan terms and understand some values may change at closing.",
+        "data_type": "str",
+        "row": 40,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "D41": {
+        "value": "Initials:",
+        "data_type": "str",
+        "row": 41,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "E41": {
+        "value": "_____________________",
+        "data_type": "str",
+        "row": 41,
+        "col": 5,
+        "column_letter": "E"
+      }
+    },
+    "Bridge - Refi & DP": {
+      "B1": {
+        "value": "TERNUS LENDING LLC",
+        "data_type": "str",
+        "row": 1,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "C2": {
+        "value": "TERM SHEET",
+        "data_type": "str",
+        "row": 2,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "E2": {
+        "value": "Date:",
+        "data_type": "str",
+        "row": 2,
+        "col": 5,
+        "column_letter": "E"
+      },
+      "B4": {
+        "value": "Guarantor:",
+        "data_type": "str",
+        "row": 4,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "D4": {
+        "value": "Phone:",
+        "data_type": "str",
+        "row": 4,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "H4": {
+        "value": "Origination Fee",
+        "data_type": "str",
+        "row": 4,
+        "col": 8,
+        "column_letter": "H"
+      },
+      "I4": {
+        "value": 0.02,
+        "data_type": "float",
+        "row": 4,
+        "col": 9,
+        "column_letter": "I"
+      },
+      "B5": {
+        "value": "Borrower:",
+        "data_type": "str",
+        "row": 5,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "D5": {
+        "value": "Years in Business:",
+        "data_type": "str",
+        "row": 5,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "H5": {
+        "value": "Max Leverage",
+        "data_type": "str",
+        "row": 5,
+        "col": 8,
+        "column_letter": "H"
+      },
+      "I5": {
+        "value": 0.7,
+        "data_type": "float",
+        "row": 5,
+        "col": 9,
+        "column_letter": "I"
+      },
+      "B6": {
+        "value": "Email Address:",
+        "data_type": "str",
+        "row": 6,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "H6": {
+        "value": "Ineterest reserve",
+        "data_type": "str",
+        "row": 6,
+        "col": 8,
+        "column_letter": "H"
+      },
+      "I6": {
+        "value": "No",
+        "data_type": "str",
+        "row": 6,
+        "col": 9,
+        "column_letter": "I"
+      },
+      "B7": {
+        "value": "Borrower's Address:",
+        "data_type": "str",
+        "row": 7,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "C8": {
+        "value": "Requested Loan Closing Date:",
+        "data_type": "str",
+        "row": 8,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "B9": {
+        "value": "Property Address:",
+        "data_type": "str",
+        "row": 9,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "B10": {
+        "value": "Year Built:",
+        "data_type": "str",
+        "row": 10,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "D10": {
+        "value": "Bedrooms:",
+        "data_type": "str",
+        "row": 10,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "B11": {
+        "value": "SqFt:",
+        "data_type": "str",
+        "row": 11,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "D11": {
+        "value": "Bathrooms:",
+        "data_type": "str",
+        "row": 11,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "B12": {
+        "value": "Pool:",
+        "data_type": "str",
+        "row": 12,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "D12": {
+        "value": "Garage:",
+        "data_type": "str",
+        "row": 12,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "C16": {
+        "value": "Max Loan Amount:",
+        "data_type": "str",
+        "row": 16,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "B17": {
+        "value": "Loan Terms",
+        "data_type": "str",
+        "row": 17,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "C18": {
+        "value": "Pmt type:",
+        "data_type": "str",
+        "row": 18,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "D18": {
+        "value": "Interest Only",
+        "data_type": "str",
+        "row": 18,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "C19": {
+        "value": "Term:",
+        "data_type": "str",
+        "row": 19,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "D19": {
+        "value": "6 months",
+        "data_type": "str",
+        "row": 19,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "C20": {
+        "value": "Daily Interest rate:",
+        "data_type": "str",
+        "row": 20,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "D20": {
+        "value": "12%  actual days/ 360",
+        "data_type": "str",
+        "row": 20,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "C21": {
+        "value": "Per Diem Interest Payment",
+        "data_type": "str",
+        "row": 21,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "C22": {
+        "value": "Estimated 30-day Interest Pmt:",
+        "data_type": "str",
+        "row": 22,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "C23": {
+        "value": "Due date:",
+        "data_type": "str",
+        "row": 23,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "D23": {
+        "value": "1st of month",
+        "data_type": "str",
+        "row": 23,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "C24": {
+        "value": "Interest Due at closing:",
+        "data_type": "str",
+        "row": 24,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "D24": {
+        "value": "Prorated current month",
+        "data_type": "str",
+        "row": 24,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "C25": {
+        "value": "Insurance:",
+        "data_type": "str",
+        "row": 25,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "D25": {
+        "value": "Must show receipt for insurance for 6 months/p@c",
+        "data_type": "str",
+        "row": 25,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "B27": {
+        "value": "Estimated Closing Fees & Adjustments",
+        "data_type": "str",
+        "row": 27,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "B28": {
+        "value": "Est. Origination Fee:",
+        "data_type": "str",
+        "row": 28,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "D28": {
+        "value": "Application Fee:",
+        "data_type": "str",
+        "row": 28,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "E28": {
+        "value": 250,
+        "data_type": "int",
+        "row": 28,
+        "col": 5,
+        "column_letter": "E"
+      },
+      "B29": {
+        "value": "Processing Fee:",
+        "data_type": "str",
+        "row": 29,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "C29": {
+        "value": 1745,
+        "data_type": "int",
+        "row": 29,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "D29": {
+        "value": "Doc Prep Fee:",
+        "data_type": "str",
+        "row": 29,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "E29": {
+        "value": 599,
+        "data_type": "int",
+        "row": 29,
+        "col": 5,
+        "column_letter": "E"
+      },
+      "B30": {
+        "value": "Interest Reserve:",
+        "data_type": "str",
+        "row": 30,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "B31": {
+        "value": "Est. Prorated Interest",
+        "data_type": "str",
+        "row": 31,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "B33": {
+        "value": "Cash Requiements",
+        "data_type": "str",
+        "row": 33,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "C34": {
+        "value": "Required Proof Of Capital",
+        "data_type": "str",
+        "row": 34,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "C35": {
+        "value": "Estimated Costs + Payoff",
+        "data_type": "str",
+        "row": 35,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "C36": {
+        "value": "Net Proceeds",
+        "data_type": "str",
+        "row": 36,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "B37": {
+        "value": "NOTE: These numbers are simply estimates designed to help you plan.  Ternus Lending, LLC has no control over other charges you may incur from the title company or other entities. This is not an underwriting approval or commitment to lend. Terms subject to change pending underwriting.",
+        "data_type": "str",
+        "row": 37,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "B41": {
+        "value": "I accept these loan terms and understand some values may change at closing.",
+        "data_type": "str",
+        "row": 41,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "D42": {
+        "value": "Initials:",
+        "data_type": "str",
+        "row": 42,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "E42": {
+        "value": "_____________________",
+        "data_type": "str",
+        "row": 42,
+        "col": 5,
+        "column_letter": "E"
+      }
+    },
+    "Data Drop downs": {
+      "A1": {
+        "value": 0.01,
+        "data_type": "float",
+        "row": 1,
+        "col": 1,
+        "column_letter": "A"
+      },
+      "B1": {
+        "value": "Yes",
+        "data_type": "str",
+        "row": 1,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "C1": {
+        "value": 0,
+        "data_type": "int",
+        "row": 1,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "D1": {
+        "value": 0.5,
+        "data_type": "float",
+        "row": 1,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "E1": {
+        "value": 2,
+        "data_type": "int",
+        "row": 1,
+        "col": 5,
+        "column_letter": "E"
+      },
+      "F1": {
+        "value": 0.12,
+        "data_type": "float",
+        "row": 1,
+        "col": 6,
+        "column_letter": "F"
+      },
+      "G1": {
+        "value": "Purchase",
+        "data_type": "str",
+        "row": 1,
+        "col": 7,
+        "column_letter": "G"
+      },
+      "A2": {
+        "value": 0.02,
+        "data_type": "float",
+        "row": 2,
+        "col": 1,
+        "column_letter": "A"
+      },
+      "B2": {
+        "value": "No",
+        "data_type": "str",
+        "row": 2,
+        "col": 2,
+        "column_letter": "B"
+      },
+      "C2": {
+        "value": 0.05,
+        "data_type": "float",
+        "row": 2,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "D2": {
+        "value": 0.55,
+        "data_type": "float",
+        "row": 2,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "E2": {
+        "value": 3,
+        "data_type": "int",
+        "row": 2,
+        "col": 5,
+        "column_letter": "E"
+      },
+      "F2": {
+        "value": 0.13,
+        "data_type": "float",
+        "row": 2,
+        "col": 6,
+        "column_letter": "F"
+      },
+      "G2": {
+        "value": "Refinance",
+        "data_type": "str",
+        "row": 2,
+        "col": 7,
+        "column_letter": "G"
+      },
+      "A3": {
+        "value": 0.0225,
+        "data_type": "float",
+        "row": 3,
+        "col": 1,
+        "column_letter": "A"
+      },
+      "C3": {
+        "value": 0.1,
+        "data_type": "float",
+        "row": 3,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "D3": {
+        "value": 0.6,
+        "data_type": "float",
+        "row": 3,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "F3": {
+        "value": 0.14,
+        "data_type": "float",
+        "row": 3,
+        "col": 6,
+        "column_letter": "F"
+      },
+      "G3": {
+        "value": "Delayed Purchase",
+        "data_type": "str",
+        "row": 3,
+        "col": 7,
+        "column_letter": "G"
+      },
+      "A4": {
+        "value": 0.025,
+        "data_type": "float",
+        "row": 4,
+        "col": 1,
+        "column_letter": "A"
+      },
+      "C4": {
+        "value": 0.15,
+        "data_type": "float",
+        "row": 4,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "D4": {
+        "value": 0.65,
+        "data_type": "float",
+        "row": 4,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "A5": {
+        "value": 0.0275,
+        "data_type": "float",
+        "row": 5,
+        "col": 1,
+        "column_letter": "A"
+      },
+      "C5": {
+        "value": 0.2,
+        "data_type": "float",
+        "row": 5,
+        "col": 3,
+        "column_letter": "C"
+      },
+      "D5": {
+        "value": 0.7,
+        "data_type": "float",
+        "row": 5,
+        "col": 4,
+        "column_letter": "D"
+      },
+      "A6": {
+        "value": 0.03,
+        "data_type": "float",
+        "row": 6,
+        "col": 1,
+        "column_letter": "A"
+      },
+      "A7": {
+        "value": 0.0325,
+        "data_type": "float",
+        "row": 7,
+        "col": 1,
+        "column_letter": "A"
+      },
+      "A8": {
+        "value": 0.035,
+        "data_type": "float",
+        "row": 8,
+        "col": 1,
+        "column_letter": "A"
+      },
+      "A9": {
+        "value": 0.0375,
+        "data_type": "float",
+        "row": 9,
+        "col": 1,
+        "column_letter": "A"
+      },
+      "A10": {
+        "value": 0.04,
+        "data_type": "float",
+        "row": 10,
+        "col": 1,
+        "column_letter": "A"
+      },
+      "A11": {
+        "value": 0.0425,
+        "data_type": "float",
+        "row": 11,
+        "col": 1,
+        "column_letter": "A"
+      },
+      "A12": {
+        "value": 0.045,
+        "data_type": "float",
+        "row": 12,
+        "col": 1,
+        "column_letter": "A"
+      },
+      "A13": {
+        "value": 0.0475,
+        "data_type": "float",
+        "row": 13,
+        "col": 1,
+        "column_letter": "A"
+      },
+      "A14": {
+        "value": 0.05,
+        "data_type": "float",
+        "row": 14,
+        "col": 1,
+        "column_letter": "A"
+      },
+      "A15": {
+        "value": 0.0525,
+        "data_type": "float",
+        "row": 15,
+        "col": 1,
+        "column_letter": "A"
+      },
+      "A16": {
+        "value": 0.055,
+        "data_type": "float",
+        "row": 16,
+        "col": 1,
+        "column_letter": "A"
+      },
+      "A17": {
+        "value": 0.0575,
+        "data_type": "float",
+        "row": 17,
+        "col": 1,
+        "column_letter": "A"
+      },
+      "A18": {
+        "value": 0.06,
+        "data_type": "float",
+        "row": 18,
+        "col": 1,
+        "column_letter": "A"
+      },
+      "A19": {
+        "value": 0.0625,
+        "data_type": "float",
+        "row": 19,
+        "col": 1,
+        "column_letter": "A"
+      },
+      "A20": {
+        "value": 0.065,
+        "data_type": "float",
+        "row": 20,
+        "col": 1,
+        "column_letter": "A"
+      },
+      "A21": {
+        "value": 0.0675,
+        "data_type": "float",
+        "row": 21,
+        "col": 1,
+        "column_letter": "A"
+      },
+      "A22": {
+        "value": 0.07,
+        "data_type": "float",
+        "row": 22,
+        "col": 1,
+        "column_letter": "A"
+      },
+      "A23": {
+        "value": 0.0725,
+        "data_type": "float",
+        "row": 23,
+        "col": 1,
+        "column_letter": "A"
+      },
+      "A24": {
+        "value": 0.075,
+        "data_type": "float",
+        "row": 24,
+        "col": 1,
+        "column_letter": "A"
+      },
+      "A25": {
+        "value": 0.0775,
+        "data_type": "float",
+        "row": 25,
+        "col": 1,
+        "column_letter": "A"
+      },
+      "A26": {
+        "value": 0.08,
+        "data_type": "float",
+        "row": 26,
+        "col": 1,
+        "column_letter": "A"
+      }
+    }
+  },
+  "summary": {
+    "total_formulas": 75,
+    "total_values": 330,
+    "sheets_count": 6
+  }
+}
